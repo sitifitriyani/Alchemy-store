@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { createContext } from "react";
+import { Link, Outlet } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+export const AuthContext = createContext();
+
+export default function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <AuthContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
+      <header className="p-4 flex justify-between gap-8 shadow-md">
+        <Link to="/" className="font-bold text-xl">
+          Getch
+        </Link>
+        <nav className="flex gap-4">
+          <Link to="/">Beranda</Link>
+        </nav>
+        {isLoggedIn ? (
+          <Link className="bg-blue-500" to="/logout">
+            Logout
+          </Link>
+        ) : (
+          <Link className="bg-blue-500" to="/login">
+            Login
+          </Link>
+        )}
+      </header>
+      <Outlet />
+      <footer className="border-t border-gray-300 p-2 text-center">
+        &copy; 2024 Getch
+      </footer>
+    </AuthContext.Provider>
+  );
 }
-
-export default App
