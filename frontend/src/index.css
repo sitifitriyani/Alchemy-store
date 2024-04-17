@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -124,6 +125,11 @@ header {
 .cart-container {
   text-align: right;
   margin: 20px;
+=======
+*{
+  margin: 0;
+  padding: 0;
+>>>>>>> c79317b5d723b2c48839370d279469a20e534702
 }
 
 .cart-container button {

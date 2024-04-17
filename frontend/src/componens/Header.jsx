@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import logo from "../../public/image/logo_gucci.png";
 import { useState, useEffect } from "react";
 import { AlignJustify } from "lucide-react";
@@ -56,6 +57,18 @@ export default function Header() {
           <AlignJustify />
         </label>
       </div>
+=======
+import { Link } from "react-router-dom";
+export default function Header() {
+  return (
+    <header
+      className="flex items-center justify-center w-full h-12 bg-transparent"
+      style={{ backdropFilter: "blur(1px)" }}
+    >
+      <Link to="/" className="font-bold text-xl">
+        Getch
+      </Link>
+>>>>>>> c79317b5d723b2c48839370d279469a20e534702
     </header>
   );
 }
