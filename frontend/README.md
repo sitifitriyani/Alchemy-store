@@ -1,8 +1,19 @@
-# React + Vite
+# Gucci Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Gucci merupakan salah satu merek fashion mewah yang sangat terkenal di dunia. Didirikan oleh Guccio Gucci pada tahun 1921 di Firenze, Italia, Gucci awalnya dikenal dengan produk-produk barang kulitnya yang berkualitas tinggi, seperti tas, sepatu, dan aksesori lainnya.
 
-Currently, two official plugins are available:
+## Fitur
+- sign in & sign up
+- Profile Akun
+- Product
+- checkout
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Diagram ER
+![diagram ER](diagram.png)
+
+## Tech Stack
+- FrontEnd : Reat.js & Taillwind
+- BackEnd : Node.js & Express.js
+- DB : PostgreSQL
+- Devops : -
+- Repo : 
