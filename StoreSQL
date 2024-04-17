@@ -1,0 +1,49 @@
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(255),
+    email VARCHAR(255) NOT null,
+    password VARCHAR(255) NOT null,
+    profilePicture BYTEA DEFAULT NULL
+);
+
+ALTER TABLE users
+ALTER COLUMN profilePicture SET DEFAULT 'http://localhost:5173/image/profil.png';
+
+CREATE TABLE products(
+	id SERIAL PRIMARY KEY,
+	image varchar(255),
+	name VARCHAR(255) NOT NULL,
+	price VARCHAR(255) NOT NULL
+);
+
+insert into products(image,name,price)values
+('http://localhost:5173/image/baju1.png','Bengal Tiger Dress Shirt','35000000'),
+('http://localhost:5173/image/jaket.png','chess jacket','20000000'),
+('http://localhost:5173/image/coat.png','Coat Button-up','2700000'),
+('http://localhost:5173/image/tas1.png','Dionysus Small Shoulder Bag','3500000'),
+('http://localhost:5173/image/kunci.png','Embossed Keychain','1800000'),
+('http://localhost:5173/image/sepatu1.png','Flashtrek Sneaker','1000000'),
+('http://localhost:5173/image/topi1.png','GG Canvas Bucket Hat','500000'),
+('http://localhost:5173/image/syal.png','GG Jacquard Scarf','3200000'),
+('http://localhost:5173/image/topi2.png','GG Jacquard Wool Beret','4000000'),
+('http://localhost:5173/image/belt1.png','GG Marmont Leather Belt','2100000'),
+('http://localhost:5173/image/belt2.png','Interlocking G Buckle Belt','2200000'),
+('http://localhost:5173/image/tas2.png','GG Marmont Small Matelassé Shoulder Bag','1600000'),
+('http://localhost:5173/image/topi3.png','GG Supreme Baseball Cap','7000000'),
+('http://localhost:5173/image/baju2.png','GG Wool Cape','6000000'),
+('http://localhost:5173/image/hoodie.png','Interlocking G Hoodie','23000000'),
+('http://localhost:5173/image/tas3.png','Jackie 1961 Mini Hobo Bag','4000000'),
+('http://localhost:5173/image/sepatu2.png','Jordaan Leather Loafer shoes','15000000'),
+('http://localhost:5173/image/tas4.png','Kai Luggage Medium Tote Bag','40000000'),
+('http://localhost:5173/image/baju3.png','Kai Tracksuit','34000000'),
+('http://localhost:5173/image/sepatu3.png','New Ace Web Sneaker','28000000'),
+('http://localhost:5173/image/sepatu5.png','Rhyton Sneaker','30000000'),
+('http://localhost:5173/image/tas5.png','Ophidia Small GG Supreme Shoulder Bag','7000000'),
+('http://localhost:5173/image/sepatu6.png','Screener Sneaker','9500000'),
+('http://localhost:5173/image/sepatu4.png','shoes bear','40000000'),
+('http://localhost:5173/image/baju4.png','Silk Shirt with GG Motif','4200000'),
+('http://localhost:5173/image/baju5.png','Snake Embroidered Polo Shirt','4000000'),
+('http://localhost:5173/image/baju6.png','Wool Cardigan with Double G Buttons','24000000'),
+('http://localhost:5173/image/topi4.png','Wool Beanie','5000000'),
+('http://localhost:5173/image/gloves.png','Web Leather Gloves','1900000'),
+('http://localhost:5173/image/baju7.png','Web Detail Button-Up Shirt','20000000');
